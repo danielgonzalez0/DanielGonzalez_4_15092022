@@ -580,6 +580,22 @@ footer {
 }
 
 /*css added to correct display (DG) */
+
+.modalClosed {
+  animation-name: modalClose;
+  animation-duration: var(--modal-duration);
+}
+
+@keyframes modalClose {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+    transform: translateY(-150px);
+  }
+}
+
 @media screen and (max-width: 1050px) {
   .hero-headline {
     font-size: 8vw;
