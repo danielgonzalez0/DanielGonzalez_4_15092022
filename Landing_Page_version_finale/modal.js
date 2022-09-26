@@ -11,18 +11,15 @@ function editNav() {
 const modalbg = document.querySelector('.bground');
 const modalBtn = document.querySelectorAll('.modal-btn');
 const formData = document.querySelectorAll('.formData');
-const modalContent = document.querySelector('.content'); //added by Daniel Gonzalez
-
+const modalContent = document.querySelector('.content');
 // launch modal event
 modalBtn.forEach((btn) => btn.addEventListener('click', launchModal));
 
 // launch modal form
 function launchModal() {
-  modalContent.classList.remove('modalClosed'); // add by Daniel Gonzalez (september 2022)
-  modalbg.style.display = 'block';
+  modalContent.classList.remove('modalClosed');
+  modalbg.classList.remove('bground-closed');
 }
-
-//code added by Daniel Gonzalez (september 2022)
 
 //-------------- Close modal form ----------------//
 
@@ -32,14 +29,13 @@ const modalCross = document.querySelector('.close');
 //catch user event & setting up interactions
 modalCross.addEventListener('click', closeModal);
 
-// function => close modal form
+/**
+ * function => close modal form
+ */
 function closeModal() {
   modalContent.classList.add('modalClosed');
   setTimeout(function () {
-    modalbg.style.display = 'none';
+    modalbg.classList.add('bground-closed');
   }, 750);
-
-  //------------end  Close modal form -----------//
 }
-
-//end code added by Daniel Gonzalez
+//------------end  Close modal form -----------//
