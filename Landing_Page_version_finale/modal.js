@@ -18,7 +18,7 @@ modalBtn.forEach((btn) => btn.addEventListener('click', launchModal));
 // launch modal form
 function launchModal() {
   modalContent.classList.remove('modalClosed');
-  modalbg.classList.remove('bground-closed');
+  modalbg.classList.remove('select-hide');
 }
 
 //-------------- Close modal form ----------------//
@@ -35,7 +35,8 @@ modalCross.addEventListener('click', closeModal);
 function closeModal() {
   modalContent.classList.add('modalClosed');
   setTimeout(function () {
-    modalbg.classList.add('bground-closed');
+    modalbg.classList.add('select-hide');
+    successMessage.classList.replace('success-show', 'select-hide');
   }, 750);
 }
 //------------end  Close modal form -----------//

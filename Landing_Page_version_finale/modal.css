@@ -19,7 +19,7 @@ body {
   font-size: 18px;
   max-width: 1300px;
   margin: 0 auto;
-  padding-top: 54px;
+  padding-top: 120px;
 }
 
 p {
@@ -194,6 +194,22 @@ main {
   font-family: var(--font-slab);
 }
 
+/*success message form validation*/
+/*add by Daniel Gonzalez (sept 2022)*/
+
+.success-show {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  vertical-align: middle;
+  height: 100%;
+  width: 100%;
+  background-color: #232323;
+  position: absolute;
+  left: 0;
+  z-index: 10;
+}
 /* Modal form */
 
 .button {
@@ -226,10 +242,6 @@ main {
   background-color: rgba(26, 39, 156, 0.4);
 }
 
-.bground-closed {
-  display: none;
-}
-
 .content {
   margin: 5% auto;
   width: 100%;
@@ -247,6 +259,7 @@ main {
 .modal-body {
   padding: 15px 8%;
   margin: 15px auto;
+  position: relative;
 }
 
 label {
@@ -366,6 +379,7 @@ input[data-error]::after {
   opacity: 1;
   cursor: pointer;
   transform: scale(0.7);
+  z-index: 20;
 }
 .close:before,
 .close:after {
@@ -640,6 +654,9 @@ footer {
 @media screen and (max-width: 850px) {
   .topnav a {
     font-size: 20px;
+  }
+  .bground {
+    top: 100px;
   }
 }
 
