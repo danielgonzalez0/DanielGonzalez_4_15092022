@@ -12,6 +12,7 @@ const modalbg = document.querySelector('.bground');
 const modalBtn = document.querySelectorAll('.modal-btn');
 const formData = document.querySelectorAll('.formData');
 const modalContent = document.querySelector('.content');
+const fields = document.querySelectorAll('input[required], #checkbox1');
 // launch modal event
 modalBtn.forEach((btn) => btn.addEventListener('click', launchModal));
 
@@ -37,6 +38,10 @@ function closeModal() {
   setTimeout(function () {
     modalbg.classList.add('select-hide');
     successMessage.classList.replace('success-show', 'select-hide');
+    fields.forEach((field) => {
+      removeErrorMessage(field);
+    });
+    inputCheckbox1.checked = true;
   }, 750);
 }
 //------------end  Close modal form -----------//
