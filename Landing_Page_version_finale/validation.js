@@ -29,7 +29,7 @@ function validate() {
 
 /**
  * function addErrorMessage => add error message of a form field
- * @param {Object} field - the field of the form you want to check
+ * @param {Object} field - the form field to be controlled
  * @param {Object} errorMessage - the error message you want to add
  */
 function addErrorMessage(field, errorMessage) {
@@ -38,7 +38,7 @@ function addErrorMessage(field, errorMessage) {
 }
 /**
  * function removeErrorMessage => reset error message of a form field & the variable valid
- * @param {Object} field - the field of the form you want to check
+ * @param {Object} field - the form field to be controlled
  */
 function removeErrorMessage(field) {
   field.parentElement.removeAttribute('data-error-visible', 'true');
@@ -62,10 +62,10 @@ function resetInputForm() {
 //specific functions
 /**
  * function nameValidity => check validity of inputs type = text
- * @param {Object} input - the input of the form you want to check => must be a text type
+ * @param {Object} input - the form field to be controlled => must be a text type
  */
 function nameValidity(input) {
-  let regexName = /^[a-zA-ZÀ-ÿ -']{2,30}$/;
+  let regexName = /^[-a-zA-ZÀ-ÿ \']{2,30}$/;
   let errorMessage = 'Veuillez entrer 2 caractères ou plus pour ce champ.';
   if (!regexName.test(input.value)) {
     addErrorMessage(input, errorMessage);
@@ -76,7 +76,7 @@ function nameValidity(input) {
 }
 /**
  * function emailValidity => check validity of inputs type = email
- * @param {Object} input - the input of the form you want to check => must be a email type
+ * @param {Object} input - the form field to be controlled => must be a email type
  */
 function emailValidity(input) {
   let regexEmail = /^[\w-\.]+@([\w-]+\.)+[\w-]{2,4}$/; //https://regexr.com/3e48o
@@ -90,7 +90,7 @@ function emailValidity(input) {
 }
 /**
  * function dateValidity => check if a date is valid
- * @param {Object} input - the input of the form you want to check => must be a date type
+ * @param {Object} input - the form field to be controlled => must be a date type
  */
 function dateValidity(input) {
   let errorMessage = 'Veuillez entrer une date valide';
@@ -104,7 +104,7 @@ function dateValidity(input) {
 }
 /**
  * function ageValidity => check user birth date validity
- * @param {Object} input - the input of the form you want to check => must be a date type
+ * @param {Object} input - the form field to be controlled => must be a date type
  */
 function ageValidity(input) {
   let errorMessage1 =
@@ -130,7 +130,7 @@ function ageValidity(input) {
 
 /**
  * function numberValidity => check validity of the input type = number
- * @param {Object} input - the input of the form you want to check => must be a number type
+ * @param {Object} input - the form field to be controlled => must be a number type
  */
 function numberValidity(input) {
   let errorMessage = 'Veuillez entrer un chiffre compris entre 0 et 99';
@@ -144,7 +144,7 @@ function numberValidity(input) {
 }
 /**
  * function radioValidity => check validity of the input type = radio
- * @param {Object} input - the input of the form you want to check => must be a radio type
+ * @param {Object} input - the form field to be controlled => must be a radio type
  */
 function radioValidity(input) {
   let radioIschecked = false;
@@ -163,7 +163,7 @@ function radioValidity(input) {
 }
 /**
  * function checkbox1Validity => check validity of the input checkbox1
- * @param {Object} input - the input of the form you want to check => must be a checkbox type
+ * @param {Object} input - the form field to be controlled => must be a checkbox type
  */
 function checkbox1Validity(input) {
   if (!input.checked) {
@@ -178,7 +178,7 @@ function checkbox1Validity(input) {
 //global functions
 /**
  * function validateInput => check if a form input is valid
- * @param {Object} input - the input of the form you want to check
+ * @param {Object} input - the form field to be controlled
  * @param {string} type - type of the input: name, email, date, number, radio, checkbox
  */
 
