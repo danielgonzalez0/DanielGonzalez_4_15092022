@@ -28,7 +28,7 @@ function validate() {
 //error message display
 
 /**
- * function addErrorMessage => add error message of a form field
+ * add error message of a form field
  * @param {Object} field - the form field to be controlled
  * @param {Object} errorMessage - the error message you want to add
  */
@@ -37,7 +37,7 @@ function addErrorMessage(field, errorMessage) {
   field.parentElement.setAttribute('data-error', errorMessage);
 }
 /**
- * function removeErrorMessage => reset error message of a form field & the variable valid
+ * reset error message of a form field & the variable valid
  * @param {Object} field - the form field to be controlled
  */
 function removeErrorMessage(field) {
@@ -46,7 +46,7 @@ function removeErrorMessage(field) {
 }
 // reset value function
 /**
- * function resetInputForm => reset input value manually
+ * reset input value manually
  */
 function resetInputForm() {
   inputFormValue.forEach((input) => {
@@ -61,7 +61,7 @@ function resetInputForm() {
 
 //specific functions
 /**
- * function nameValidity => check validity of inputs type = text
+ * check validity of input value type = text
  * @param {Object} input - the form field to be controlled => must be a text type
  */
 function nameValidity(input) {
@@ -75,7 +75,7 @@ function nameValidity(input) {
   }
 }
 /**
- * function emailValidity => check validity of inputs type = email
+ * check validity of inputs type = email
  * @param {Object} input - the form field to be controlled => must be a email type
  */
 function emailValidity(input) {
@@ -89,7 +89,7 @@ function emailValidity(input) {
   }
 }
 /**
- * function dateValidity => check if a date is valid
+ * check if a date is valid
  * @param {Object} input - the form field to be controlled => must be a date type
  */
 function dateValidity(input) {
@@ -103,7 +103,7 @@ function dateValidity(input) {
   }
 }
 /**
- * function ageValidity => check user birth date validity
+ * check user birth date validity
  * @param {Object} input - the form field to be controlled => must be a date type
  */
 function ageValidity(input) {
@@ -129,7 +129,7 @@ function ageValidity(input) {
 }
 
 /**
- * function numberValidity => check validity of the input type = number
+ * check validity of the input type = number
  * @param {Object} input - the form field to be controlled => must be a number type
  */
 function numberValidity(input) {
@@ -143,7 +143,7 @@ function numberValidity(input) {
   }
 }
 /**
- * function radioValidity => check validity of the input type = radio
+ * check validity of the input type = radio
  * @param {Object} input - the form field to be controlled => must be a radio type
  */
 function radioValidity(input) {
@@ -162,7 +162,7 @@ function radioValidity(input) {
   }
 }
 /**
- * function checkbox1Validity => check validity of the input checkbox1
+ * check validity of the input checkbox1
  * @param {Object} input - the form field to be controlled => must be a checkbox type
  */
 function checkbox1Validity(input) {
@@ -177,7 +177,7 @@ function checkbox1Validity(input) {
 
 //global functions
 /**
- * function validateInput => check if a form input is valid
+ * check if a form input is valid
  * @param {Object} input - the form field to be controlled
  * @param {string} type - type of the input: name, email, date, number, radio, checkbox
  */
@@ -209,7 +209,7 @@ function validateInput(input, type) {
 }
 
 /**
- * function validateForm => check the validity of the form
+ * check the validity of the form
  */
 function validateForm() {
   let checkInputFirstName = validateInput(inputFirstName, 'name');

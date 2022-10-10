@@ -72,6 +72,7 @@ img {
   justify-content: flex-end;
   align-items: center;
   width: 70%;
+  background-color: white;
   /*end css added to correct display (DG)*/
 }
 .topnav a {
@@ -111,9 +112,9 @@ img {
     align-items: flex-end;
   }
   /*end css added to correct display (DG)*/
-  .topnav a {
+  /* .topnav a {
     display: none;
-  }
+  } */
   .topnav a.icon {
     /* float: right;*/
     display: block;
@@ -126,37 +127,53 @@ img {
     position: fixed;
     align-items: flex-start;
   }
+
   .topnav.responsive .icon {
     position: absolute;
     right: 3.5%;
     top: 20px;
   }
-}
-/* css added to correct display (DG)*/
-.topnav.responsive .header-logo {
-  height: 57px;
-}
 
-.topnav.responsive .main-navbar::before {
-  content: '';
-  display: block;
-  height: 50px;
-  /*end css added to correct display (DG)*/
-}
-.topnav.responsive a {
-  float: none;
-  display: block;
-  text-align: left;
-}
-
-@media screen and (max-width: 540px) {
-  .topnav a {
-    display: none;
+  .main-navbar-container {
+    position: fixed;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    border-radius: 20px;
+    background: white;
+    top: 75px;
+    opacity: 0;
+    transform: translateX(250px);
+   
   }
-  .topnav a.icon {
-    float: right;
+
+  .responsive .main-navbar-container {
+    animation: menuopen 1s forwards;
+
+  }
+  @keyframes menuopen {
+    100% {
+      opacity: 1;
+      transform: translateX(0);
+    }
+  }
+
+  /* css added to correct display (DG)*/
+  .topnav.responsive .header-logo,
+  .topnav .header-logo {
+    height: 57px;
+  }
+
+  .topnav.responsive .main-navbar::before {
+    content: '';
     display: block;
-    /* margin-top: -15px;*/ /*css disabled by DG*/
+    height: 50px;
+    /*end css added to correct display (DG)*/
+  }
+  .topnav.responsive a {
+    float: none;
+    display: block;
+    text-align: left;
   }
 }
 
