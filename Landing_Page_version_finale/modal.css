@@ -144,17 +144,27 @@ img {
     top: 75px;
     opacity: 0;
     transform: translateX(250px);
-   
   }
 
-  .responsive .main-navbar-container {
+  .menuactive {
     animation: menuopen 1s forwards;
-
   }
+  .menuinactive {
+    opacity: 1;
+    transform: translateX(0);
+    animation: menuclose 1s forwards;
+  }
+
   @keyframes menuopen {
     100% {
       opacity: 1;
       transform: translateX(0);
+    }
+  }
+  @keyframes menuclose {
+    100% {
+      opacity: 0;
+      transform: translateX(250px);
     }
   }
 
