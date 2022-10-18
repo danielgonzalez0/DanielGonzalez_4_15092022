@@ -147,12 +147,12 @@ img {
   }
 
   .menuactive {
-    animation: menuopen 1s forwards;
+    animation: menuopen 0.5s forwards;
   }
   .menuinactive {
     opacity: 1;
     transform: translateX(0);
-    animation: menuclose 1s forwards;
+    animation: menuclose 0.5s forwards;
   }
 
   @keyframes menuopen {

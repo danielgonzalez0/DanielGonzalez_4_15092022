@@ -9,7 +9,7 @@ function editNav() {
     y.classList.replace('menuactive', 'menuinactive');
     setTimeout(() => {
       y.classList.remove('menuinactive');
-    }, 900);
+    }, 500);
   }
 }
 
