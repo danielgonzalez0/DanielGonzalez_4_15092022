@@ -34,3 +34,7 @@ Projet n°4 du parcours Développeur Front-End qui consiste à créer une landin
 
 Programmer en JavaScript
 
+### Version web du projet disponible 
+
+https://danielgonzalez0.github.io/DanielGonzalez_4_15092022/
+
