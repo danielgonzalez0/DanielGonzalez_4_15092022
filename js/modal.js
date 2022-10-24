@@ -30,6 +30,7 @@ modalBtn.forEach((btn) => btn.addEventListener('click', launchModal));
 // -------------- Close modal form ----------------
 // variable declaration
 const modalCross = document.querySelector('.close');
+const modalBtnClose = document.querySelector('.modalBtnClose');
 
 /**
  * close modal form
@@ -47,4 +48,5 @@ function closeModal() {
 }
 // catch user event & setting up interactions
 modalCross.addEventListener('click', closeModal);
+modalBtnClose.addEventListener('click', closeModal);
 // ------------end  Close modal form -----------
