@@ -46,6 +46,7 @@ img {
   margin: 0;
   background-color: white;
   padding: 20px 3.5%;
+  box-shadow: 0px 0 5px 0 #00000021;
   /*end css added to correct display (DG)*/
   overflow: hidden;
   /* margin: 3.5%;*/
@@ -85,12 +86,22 @@ img {
   text-decoration: none;
   font-size: 20px;
   font-family: Roboto, sans-serif;
+  position: relative;
 }
 
 .topnav a:hover {
   background-color: #ff0000;
   color: #ffffff;
   border-radius: 15px;
+}
+.topnav a:hover:after {
+  content: '';
+  width: 75%;
+  position: absolute;
+  border: solid 1px white;
+  bottom: 7px;
+  left: 50%;
+  transform: translateX(-50%);
 }
 
 .topnav a.active {
@@ -118,6 +129,14 @@ img {
   .topnav a.icon {
     /* float: right;*/
     display: block;
+    color: red;
+  }
+  .topnav a:hover:after {
+    display: none;
+  }
+  .topnav a.icon:hover {
+    /* float: right;*/
+    color: white;
   }
 }
 
@@ -148,6 +167,7 @@ img {
 
   .menuactive {
     animation: menuopen 0.5s forwards;
+    box-shadow: 5px 5px 15px 5px #00000021;
   }
   .menuinactive {
     opacity: 1;
@@ -241,7 +261,7 @@ main {
   line-height: 51px;
 }
 
-.success-show .button{
+.success-show .button {
   position: absolute;
   left: 50%;
   transform: translateX(-50%);

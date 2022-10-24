@@ -4,7 +4,7 @@
 const contactForm = document.querySelector('#frmContact');
 const inputFormRadio = document.querySelectorAll('input[name=location]');
 const inputFormValue = document.querySelectorAll(
-  'input[type=text], input[type=email], input[type=date], input[type=number]',
+  'input[type=text], input[type=email], input[type=date], input[type=number]'
 );
 
 // single Element
@@ -107,14 +107,15 @@ function dateValidity(input) {
  * @param {Object} input - the form field to be controlled => must be a date type
  */
 function ageValidity(input) {
-  const errorMessage1 = 'Vous ne pouvez pas entrer une date inférieure au 01/01/1900';
+  const errorMessage1 =
+    'Vous ne pouvez pas entrer une date inférieure au 01/01/1900';
   const errorMessage2 = 'Vous devez avoir 18 ans mininum pour vous inscrire';
   const date = new Date(input.value);
   const minDate = new Date(1899, 12, 1);
   const today = new Date();
   const minAgeYear = today.getFullYear() - 18;
   const minAgeMonth = today.getMonth();
-  const minAgeDay = today.getDate();
+  const minAgeDay = today.getDate() + 1;
   const minAgeDate = new Date(minAgeYear, minAgeMonth, minAgeDay);
   if (date < minDate) {
     addErrorMessage(input, errorMessage1);
@@ -213,14 +214,14 @@ function validateForm() {
   const checkInputRadio = validateInput(inputFormRadio, 'radio');
 
   if (
-    checkInputFirstName
-    && checkInputLastName
-    && checkInputEmail
-    && checkInputDate
-    && checkAgeUser
-    && checkInputNumber
-    && CheckInputCheckbox
-    && checkInputRadio
+    checkInputFirstName &&
+    checkInputLastName &&
+    checkInputEmail &&
+    checkInputDate &&
+    checkAgeUser &&
+    checkInputNumber &&
+    CheckInputCheckbox &&
+    checkInputRadio
   ) {
     // coding post steps process
     validate();
